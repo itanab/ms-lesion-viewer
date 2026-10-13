@@ -1,0 +1,1 @@
+{"root":["./src/app.tsx","./src/api.ts","./src/frames.ts","./src/geometry.test.ts","./src/geometry.ts","./src/hooks.ts","./src/main.tsx","./src/types.ts","./src/components/caserail.tsx","./src/components/dialogs.tsx","./src/components/loadstrip.tsx","./src/components/planeview.tsx","./src/components/sidepanel.tsx","./vite.config.ts"],"version":"5.6.3"}

@@ -1,0 +1,12 @@
+# CPU demo: no model weights, no GPU. Published on the host loopback only. No authentication: never expose remotely.
+services:
+  viewer:
+    build: { context: ., dockerfile: backend/Dockerfile }
+    ports: ["127.0.0.1:8000:8000"]
+    environment:
+      MSLV_ADAPTER: ${MSLV_ADAPTER:-none}
+      MSLV_ENABLE_MOCK: ${MSLV_ENABLE_MOCK:-0}
+      MSLV_ADAPTER_CONFIG: ${MSLV_ADAPTER_CONFIG:-{}}
+      MSLV_DEVICE: ${MSLV_DEVICE:-cpu}
+    volumes: ["./data:/data"]
+    restart: unless-stopped
